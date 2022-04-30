@@ -1,0 +1,12 @@
+<div class="form-container">
+  <h1>Edit Task</h1>
+  <form [formGroup]="editTaskForm" (ngSubmit)="editTask()">
+    <mat-form-field>
+      <input matInput placeholder="Task" formControlName="task"/>
+    </mat-form-field>
+    <div>
+      <button type="submit" mat-raised-button color="primary">Add</button>
+    </div>
+  </form>
+
+</div>

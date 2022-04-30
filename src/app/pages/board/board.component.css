@@ -1,0 +1,42 @@
+.board{
+  display: flex;
+  flex-direction: column;
+}
+
+.board-bar{
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.board-title{
+  font-size: 1.2rem;
+  font-weight: board;
+  color: solid black;
+}
+
+.column-wrapper{
+  height: 80vh;
+  background-color: pink;
+
+  display: flex;
+  flex-grow: 1;
+  overflow-x: auto;
+
+
+}
+
+.columns{
+  /* display: flex; */
+  padding: 24px 20px;
+  flex-grow: 1;
+}
+
+app-column{
+  display: flex;
+  margin-bottom: 20px;
+}
+
+
+

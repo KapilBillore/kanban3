@@ -1,0 +1,9 @@
+<div class="task" *ngFor="let task of tasks; let itask=index" cdkDrag>
+  <mat-card>
+    {{ task }}
+    <div class="actions">
+      <a  (click)="openEditTaskDialog(task)" [routerLink]="['/edit', columnIndex,itask]"><mat-icon>edit</mat-icon></a>
+      <a  (click)="deleteTask(itask)"><mat-icon>delete</mat-icon></a>
+    </div>
+  </mat-card>
+</div>

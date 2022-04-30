@@ -1,0 +1,23 @@
+mat-card{
+  margin: 3px 4px;
+  display: flex;
+  justify-content: space-between;
+}
+
+mat-icon{
+  font-size: 1rem;
+}
+
+.actions{
+  display: none;
+}
+
+mat-card:hover >.actions{
+  display: block;
+}
+
+
+
+.task:last-child {
+  border: none;
+}

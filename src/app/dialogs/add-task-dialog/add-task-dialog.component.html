@@ -1,0 +1,12 @@
+<div class="form-container">
+  <h1>Add Task</h1>
+  <form [formGroup]="addTaskForm" (ngSubmit)="addTask()">
+    <mat-form-field>
+      <input matInput placeholder="Task" required formControlName="task"/>
+    </mat-form-field>
+    <div>
+      <button type="submit" mat-raised-button color="primary" [disabled]="!addTaskForm.valid">Add</button>
+    </div>
+  </form>
+
+</div>

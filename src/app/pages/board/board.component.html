@@ -1,0 +1,14 @@
+<div class="board">
+  <div class="board-bar">
+    <div class="board-title">
+      {{ board?.name }}
+    </div>
+  </div>
+
+  <div class="column-wrapper">
+    <div class="columns" cdkDropListGroup>
+      <app-column [columns]="board?.columns" (deleteSelectedColumn)="deleteColumn($event)"
+        (deleteSelectedTask)="deleteTask($event)"></app-column>
+    </div>
+  </div>
+</div>

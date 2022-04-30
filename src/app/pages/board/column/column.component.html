@@ -1,0 +1,12 @@
+<div cdkDropList [cdkDropListData]="column.tasks" (cdkDropListDropped)="drop($event)" class="column" *ngFor="let column of columns; let icol = index">
+  <div class="column-title">
+    {{column.name}}
+    <div class="actions">
+      <a (click)="openAddTaskDialog(column.name)"  [routerLink]="['/add', column.name]"><mat-icon>add</mat-icon></a>
+      <a (click)="deleteColumn(icol)"><mat-icon>delete</mat-icon></a>
+    </div>
+  </div>
+  <div class="task-container"  >
+    <app-task [tasks]="column?.tasks" [columnIndex]="icol" (deleteSelectedTask)="deleteTask($event, icol) "></app-task>
+  </div>
+</div>
